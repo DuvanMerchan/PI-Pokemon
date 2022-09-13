@@ -1,0 +1,25 @@
+.box_LP{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    background-image: url('./Pokemon.svg');
+    justify-content: center;
+    height: 50vh;
+}
+
+.titulo{
+    display: grid;
+    margin-left: 10%;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.contenido{
+    justify-self: center;
+    color: black;
+    text-shadow: -1px 0 white, 1px 0 white, 1px 0 white, -1px 0 white;
+}
+
+.low{
+    text-align-last: center;
+}

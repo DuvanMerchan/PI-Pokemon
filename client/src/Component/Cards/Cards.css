@@ -1,0 +1,89 @@
+
+.conteiner{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 2;
+}
+.cards-Conteiner{
+    width: 200px;
+    height: 300px;
+    border-radius: 5%;
+    display: grid;
+    grid-template-rows: 100px 200px;
+    align-items: center;
+    justify-items: center;
+    background-image: url('./svg/back.svg');
+}
+
+.img-Conteiner{
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-self: center;
+    display: contents;
+    background-color: bisque;
+    border-radius: 30%;
+}
+.h2, h1{
+    color: yellow;
+    text-shadow: -2.5px 0 blue, 2.5px 0 blue, 2.5px 0 blue, -2.5px 0 blue;
+}
+
+.h1,h2{
+    color: yellow;
+    text-shadow: -2.5px 0 blue, 2.5px 0 blue, 2.5px 0 blue, -2.5px 0 blue;
+}
+
+.img-Pokemon{
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+}
+
+.data-Conteiner{
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-rows: 20% 30%20% 20% 15%20%;
+    height: 220px;
+    justify-items: center;
+}
+.typeContainer{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.type-Conteiner-types{
+    display: flex;
+    justify-content: space-around;
+}
+
+.detalleButton {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:17px;
+	padding:7px 26px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.detalleButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.detalleButton:active {
+	position:relative;
+	top:1px;
+}

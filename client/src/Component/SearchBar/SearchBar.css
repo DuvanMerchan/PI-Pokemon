@@ -1,0 +1,14 @@
+.searchBar{
+    display: inline-block;
+}
+
+.box_Search{
+    width: 200px;
+    margin: 2px;
+}
+
+.button{
+    border-radius: 3%;
+    background-color: rgb(228, 2, 2);
+    color: rgb(255, 255, 255);
+}
