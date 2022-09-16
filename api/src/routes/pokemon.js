@@ -13,6 +13,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   let { name } = req.query;
   let pokemonInfo = [];
+  try {
   if(!name){
   pokemonInfo = await getAllPokemon();
   pokemonInfo.sort((a,b)=>{
@@ -32,6 +33,8 @@ router.get("/", async (req, res) => {
   } else {
     return res.json(pokemonInfo);
   }
+  }} catch (error) {
+    console.log(error)
   }
 });
 
@@ -59,12 +62,14 @@ router.post("/", async (req, res) => {
 
   if (!name) return res.json({ info: "El nombre es obligatorio" });
   if(!type) return res.json({ info: "El tipo es obligatorio" }); 
-
+try {
   const newPokemon = await createPokemon(name,type,img,hp,attack,defense,sp_attack,
     sp_defense,speed,height,weight)
 
   res.json({ msg: newPokemon });
-  
-});
+} catch (error) {
+  console.log(error)
+}});
+
 
 module.exports = router;

@@ -4,19 +4,20 @@ import './Card.css'
 import { typeColor, colorPoke, textColorPoke } from "../Styled/TypeColor";
 
 function Card({ pokemonDetail }) {
-  return (<div className="conteiner">
+  return (<div className="conteinerCard">
     <figure className="card-Conteiner" key={pokemonDetail.id}>
-      <div className="img-Conteiner">
+        <div className="img-card-Conteiner">
         <img
           className="img-Pokemon"
           src={pokemonDetail.img}
           alt="pokeImg"
-        ></img>
+          ></img>
+          <h1>{pokemonDetail.name}</h1>
+          <h2>#{pokemonDetail.id}</h2>
       </div>
-      <figcaption>
-        <h1>{pokemonDetail.name}</h1>
-        <h3>#{pokemonDetail.id}</h3>
-        <p>Tipos</p>
+      <figcaption className="dataCard">
+      <div className="typyStats">
+        <h2>Tipos</h2>
         <div>
           {pokemonDetail.type
             ? pokemonDetail?.type.map((t, index) => {
@@ -44,9 +45,11 @@ function Card({ pokemonDetail }) {
           <Stats valor={pokemonDetail.sp_defense} nombre={'SP.DEF'} />
           <Stats valor={pokemonDetail.speed} nombre={'SPEED'} />
         </div>
-        <div>
-          <p>HEIGHT:{pokemonDetail.height}</p>
-          <p>WEIGHT:{pokemonDetail.weight}</p>
+        </div>
+        <div className="height_weight">
+          <div></div>
+          <h4>HEIGHT:{pokemonDetail.height/10}m</h4>
+          <h4>WEIGHT:{pokemonDetail.weight/10}Kg</h4>
         </div>
       </figcaption>
     </figure></div>

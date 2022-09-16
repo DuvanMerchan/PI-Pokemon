@@ -100,6 +100,7 @@ function CreatePokemon (){
                 placeholder="pikachu.."
                 name="name"
                 value={data.name}
+                maxLength='15'
                 onChange={handleInputChange}
                 required
               />
@@ -120,6 +121,7 @@ function CreatePokemon (){
                 type="number"
                 name="hp"
                 value={data.hp}
+                max='300'
                 onChange={handleInputChange}
               />
             </p>
@@ -149,6 +151,7 @@ function CreatePokemon (){
               <input
                 type="number"
                 name="attack"
+                max='255'
                 value={data.attack}
                 onChange={handleInputChange}
               />
@@ -158,6 +161,7 @@ function CreatePokemon (){
               <input
                 type="number"
                 name="defense"
+                max='255'
                 value={data.defense}
                 onChange={handleInputChange}
               />
@@ -167,6 +171,7 @@ function CreatePokemon (){
               <input
                 type="number"
                 name="sp_attack"
+                max='255'
                 value={data.sp_attack}
                 onChange={handleInputChange}
               />
@@ -176,6 +181,7 @@ function CreatePokemon (){
               <input
                 type="number"
                 name="sp_defense"
+                max='255'
                 value={data.sp_defense}
                 onChange={handleInputChange}
               />

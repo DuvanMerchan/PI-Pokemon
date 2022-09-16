@@ -1,4 +1,5 @@
-.conteiner{
+.conteinerCard{
+    display: flex;
     width: 980px;
     height: 647px;
 }
@@ -6,11 +7,18 @@
     background-image: url('./Pokedex2.png');
     width: inherit;
     height: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.img-Conteiner{
-
+.img-card-Conteiner{
+    align-self: center;
+    justify-self: center;
+    margin-top: -40px;
 }
-.img-Pokemon{}
+.dataCard{
+    display: grid;
+    grid-template-rows: 545px 100px;
+}
 
 .typeButton{
     border: 1px solid;
@@ -18,4 +26,13 @@
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
+}
+.typyStats{
+    align-self: center;
+    justify-self: center;
+    margin-top: 120px;
+}
+.height_weight{
+    display: grid;
+    grid-template-columns: 100px 152px 1fr;
 }
