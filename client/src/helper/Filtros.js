@@ -45,6 +45,14 @@ export const ordered = (order, pokemons) => {
             });
             ord = ord.filter((e,i) => ord.indexOf(e)===i)
             return ord;
+        case 'API':
+            if(pokemons.length){ 
+               ord = pokemons.filter(p=>p.source.includes('API'))}
+            return ord;
+        case 'DB':
+            if(pokemons.length){ 
+                ord = pokemons.filter(p=>p.source.includes('DB'))}
+            return ord;
         default:
             return pokemons
     }

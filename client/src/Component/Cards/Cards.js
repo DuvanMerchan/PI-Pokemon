@@ -1,35 +1,35 @@
 import React from "react";
+import { colorPoke, typeColor, textColorPoke } from "../Styled/TypeColor";
 import { Link } from "react-router-dom";
 import "./Cards.css";
 
 function Cards(pokemons) {
   pokemons = pokemons.pokemons;
-  // {pokemon.type[1]?(
-  //   <div className="typeContainer">
-  //     <h3 className="type-Conteiner-types">{pokemon.type[0]}</h3>
-  //     <h3 className="type-Conteiner-types">{pokemon.type[1]}</h3>
-  //   </div>
-  //   ):(
-  //     <div>
-  //       <h3 className="type-Conteiner-types">{pokemon.type[0]}</h3>
-  //     </div>
-  //   )}
- // console.log(pokemons.type)
   try {
     return (
       <div className="conteiner">
       {pokemons?.map((pokemon) => (
         <figure key={pokemon.name} className="cards-Conteiner" >
-          <div className="img-Conteiner" >
+          <div className="img-Conteiner" key={pokemon.id} >
             <img className="img-Pokemon" src={pokemon.img} alt="pokeImg"></img>
           </div>
-          <figcaption className="data-Conteiner" >
+          <figcaption className="data-Conteiner" key={pokemon.name}>
             <h2>#{pokemon.id}</h2>
             <h1>{pokemon.name}</h1>
-            <div className="typeContainer" key={pokemon.name}>
-            {pokemon.type? pokemon?.type.map((t) => <div><h3 key={t}>{t}</h3></div>)
-                 : null
+            <div className="typeContainer" >
+              {pokemon.type?
+              pokemon.type?.map((t,index)=>
+              {return (
+                  <button 
+                  className="typeButton"
+                  style={{
+                    backgroundColor: typeColor(colorPoke,t),
+                    color: typeColor(textColorPoke, t),
+                    border: typeColor(textColorPoke, t),}} 
+                  key={index}>{t.toUpperCase()}</button>
+                )
               }
+              ) : null }
                </div>
              <Link to={`/detail/${pokemon.id}`}>
                 <p className="detalleButton">Detalle</p>

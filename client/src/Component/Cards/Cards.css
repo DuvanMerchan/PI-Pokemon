@@ -3,7 +3,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     flex-direction: row;
     flex-wrap: wrap;
     flex: 2;
@@ -53,16 +53,24 @@
     justify-items: center;
 }
 .typeContainer{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-around;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; */
 }
 
 .type-Conteiner-types{
     display: flex;
     justify-content: space-around;
+}
+
+.typeButton{
+    border: 1px solid;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
 }
 
 .detalleButton {

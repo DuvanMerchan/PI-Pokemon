@@ -30,7 +30,7 @@ function SearchBar() {
             placeholder="Encuentra tu pokemon..."
             className="box_Search" 
            ></input>
-            <input type='submit' className='button' value='find'></input>
+            <input type='submit' className='button' value='FIND'></input>
         </form>
         </div>
     )

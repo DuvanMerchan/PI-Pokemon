@@ -51,7 +51,6 @@ export const type = (type) => {
   }
 }
 export const order = (order) => {
-  console.log('ord1',order)
   return (dispatch) => {
     dispatch({type: ORDER, payload: order})
   }

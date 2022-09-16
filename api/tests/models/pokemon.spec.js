@@ -1,9 +1,9 @@
 const { Pokemon, conn } = require('../../src/db.js');
-const { expect } = require('chai');
+const { expect } = require('chai').expect;
 
 describe('Pokemon model', () => {
-  before(() => conn.authenticate()
-    .catch((err) => {
+  before(() => 
+  conn.authenticate().catch((err) => {
       console.error('Unable to connect to the database:', err);
     }));
   describe('Validators', () => {
@@ -18,5 +18,19 @@ describe('Pokemon model', () => {
         Pokemon.create({ name: 'Pikachu' });
       });
     });
-  });
+  
+  describe('Type', ()=>{
+    it('funciona si pasa un tipo', () =>{
+      Pokemon.create({ name: 'Pikachu', type: ['electric'] });
+    })
+  })
+  describe("Stats", () => {
+    it("Funciona si no se pasa algun valor", () => {
+      Pokemon.create({ name: "Pikachu" });
+      Pokemon.create({ name: "Pikachu", hp: 100});
+      Pokemon.create({ name: "Pikachu", defense: 100 });
+      Pokemon.create({ name: "Pikachu", speed: 100 });
+      Pokemon.create({ name: "Pikachu", height: 100 });
+    });
+  })});
 });

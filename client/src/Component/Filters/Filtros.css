@@ -1,0 +1,57 @@
+.filtros{
+    margin-top: inherit;
+}
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 140px;
+}
+
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 20px;
+    outline: 0;
+    border: 3px solid #ae1c1c;
+    border-radius: 12px;
+    background: #d84444;
+    color: #e6e7ed;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+    .select select::-ms-expand {
+        display: none;
+    }
+    .select select:hover,
+    .select select:focus {
+        color: #ffffff;
+        background: #c16666;
+    }
+    .select select:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+.select_arrow {
+position: absolute;
+top: 16px;
+right: 15px;
+width: 9px;
+height: 9px;
+border: solid #020202;
+border-width: 0 4px 4px 0;
+display: inline-block;
+padding: 3px;
+transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+border-color: #ff0000;
+}
+.select select:disabled ~ .select_arrow {
+border-top-color: #ffffff;
+}

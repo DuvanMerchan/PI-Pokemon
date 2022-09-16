@@ -1,3 +1,21 @@
+.conteiner{
+    width: 980px;
+    height: 647px;
+}
 .card-Conteiner{
-    background-image: url('./pokedex.svg');
+    background-image: url('./Pokedex2.png');
+    width: inherit;
+    height: inherit;
+}
+.img-Conteiner{
+
+}
+.img-Pokemon{}
+
+.typeButton{
+    border: 1px solid;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
 }

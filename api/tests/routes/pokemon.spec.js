@@ -21,4 +21,12 @@ describe('Pokemon routes', () => {
       agent.get('/pokemons').expect(200)
     );
   });
+  describe('GET /types', ()=>{
+    it('should get 200', () =>
+    agent.get('/types').expect(200)) 
+  });
+  describe('GET /pokemons/?name=Pikachu', ()=>{
+    it('should get 200', () =>
+    agent.get('/pokemons/?name=Pikachu').expect(200))
+  })
 });

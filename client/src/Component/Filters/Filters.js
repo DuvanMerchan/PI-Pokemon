@@ -1,4 +1,5 @@
 import React from "react";
+import './Filtros.css'
 import { useDispatch, useSelector } from "react-redux";
 import { order, type } from "../actions/Actions";
 
@@ -17,7 +18,8 @@ export const Filters = ()=>{
         dispatch(order(e.target.value))
     }
     return(
-        <div>
+        <div className="filtros">
+            <div className="select">
             <select className="Ordenar" onChange={byTipo}>
                 <option value=''>Tipo:</option>
                 {tipos?.map((t)=>(
@@ -26,13 +28,19 @@ export const Filters = ()=>{
                     </option>
                 ))}
             </select>
+            <div className="select_arrow"></div></div>
+            <div className="select">
             <select className="Ordenar" onChange={orderBy}>
                 <option value=''>Ordenar por:</option>
                 <option value='a-z'>A-Z</option>
                 <option value='z-a'>Z-A</option>
                 <option value='attack+'>Ataque+</option>
                 <option value='attack-'>Ataque-</option>
+                <option value='API'>API</option>
+                <option value='DB'>Base de Datos</option>
+                
             </select>
+            <div className="select_arrow"></div></div>
         </div>
     )
 }

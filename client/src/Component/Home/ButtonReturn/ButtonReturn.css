@@ -1,0 +1,17 @@
+/* .flecha {
+    width: 0; 
+    height: 0; 
+    border-right: 100px solid rgb(77, 8, 8);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent; 
+} */
+.flecha{background:0 0;border:0;font-size:22px;
+    /* line-height:2em; */
+    position:relative;width: 50px;height: 30px}
+.flecha a{color:#fff;text-decoration:none;position:relative;z-index:10}
+.flecha::after,.flecha::before{background:#e4135d;border-radius:2px;content:'';display:block;position:absolute;left:0;right:0;-webkit-transition:all 1s;transition:all 1s;height:15px}
+.flecha::before{box-shadow:-1px 1px 0 #c81163,-2px 2px 0 #c81163,-3px 3px 0 #c81163,-4px 4px 0 #c81163;-webkit-transform:skew(45deg);transform:skew(45deg);bottom:0;z-index:1}
+.flecha::after{box-shadow:1px 1px 0 #c81163,2px 2px 0 #c81163,3px 3px 0 #c81163,4px 4px 0 #c81163;-webkit-transform:skew(-45deg);transform:skew(-45deg);top:0}
+.flecha:hover::after,.flecha:hover::before{background:#f1538b}
+.flecha:focus{outline:0}
+.flecha:focus::after,.flecha:focus::before{background:#f1538b}

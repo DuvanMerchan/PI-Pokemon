@@ -4,11 +4,28 @@
 
 .box_Search{
     width: 200px;
-    margin: 2px;
+    margin-left: 5px;
+    font-family: 'Arial';
+    padding: 10px 20px;
+    outline: 0;
+    border: 3px solid #ae1c1c;
+    border-radius: 12px;
+    background: #d84444;
+    color: #e6e7ed;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
-
+.box_Search::placeholder{
+    color: #e6e7ed;
+}
 .button{
-    border-radius: 3%;
-    background-color: rgb(228, 2, 2);
-    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 60px;
+    font-family: 'Arial';
+    font-size: large;
+    border: 3px solid #ae1c1c;
+    border-radius: 12px;
+    background: #dd2c2c;
+    color: #e6e7ed;
 }

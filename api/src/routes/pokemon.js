@@ -43,7 +43,6 @@ router.get("/:id", async (req, res) => {
     else {
       res.json(pokemonInfo);
     }} catch (e) {
-      console.log('este es el error',e)
       res.json({ info: "No se encontro el pokemon" });
   }
 });
@@ -63,8 +62,6 @@ router.post("/", async (req, res) => {
 
   const newPokemon = await createPokemon(name,type,img,hp,attack,defense,sp_attack,
     sp_defense,speed,height,weight)
-
-    console.log('newPokemon',newPokemon)
 
   res.json({ msg: newPokemon });
   
